@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <assert.h>
 
 struct CountsBySoH {
@@ -27,4 +27,19 @@ void testBucketingByHealth() {
 int main() {
   testBucketingByHealth();
   return 0;
+}*/
+#include<stdio.h>
+void main()
+{
+int present_capacity,rated_capacity,ch=0,ce=0,cf=0;
+float SoH;
+scanf("%d%d",&present_capacity,&rated_capacity);
+SoH=(100*present_capacity)/rated_capacity;
+if(SoH>80 && SoH<=100)
+ch++;
+else if(SoH>=63 && SoH<=80)
+  ce++;
+else
+  cf++;
+printf("%d %d %d",ch,ce,cf);
 }
