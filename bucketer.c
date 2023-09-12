@@ -31,8 +31,8 @@ int main() {
 #include<stdio.h>
 void main()
 {
-int present_capacity,rated_capacity,ch=0,ce=0,cf=0;
-int SoH;
+int present_capacity,rated_capacity,ch=0,ce=0,cf=0,SoH;
+//int SoH;
 scanf("%d%d",&present_capacity,&rated_capacity);
 SoH=(100*present_capacity)/rated_capacity;
 if(SoH>80 && SoH<=100)
