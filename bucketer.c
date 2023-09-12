@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <assert.h>
 
 struct CountsBySoH {
@@ -9,6 +9,7 @@ struct CountsBySoH {
 
 struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBatteries) {
   struct CountsBySoH counts = {0, 0, 0};
+  CountsBySoH=100*presentCapacities/nBatteries;
   return counts;
 }
 
@@ -25,5 +26,27 @@ void testBucketingByHealth() {
 
 int main() {
   testBucketingByHealth();
+  return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+int present_capacity,rated_capacity,ch=0,ce=0,cf=0;
+int SoH;
+scanf("%d%d",&present_capacity,&rated_capacity);
+  if(rated_capacity==0)
+  {
+    printf("Error");
+    return 1;
+  }
+  
+SoH=(100*present_capacity)/rated_capacity;
+if(SoH>80 && SoH<=100)
+ch++;
+else if(SoH>=63 && SoH<=80)
+  ce++;
+else
+  cf++;
+printf("%d %d %d",ch,ce,cf);
   return 0;
 }
