@@ -32,7 +32,7 @@ int main() {
 void main()
 {
 int present_capacity,rated_capacity,ch=0,ce=0,cf=0;
-float SoH;
+int SoH;
 scanf("%d%d",&present_capacity,&rated_capacity);
 SoH=(100*present_capacity)/rated_capacity;
 if(SoH>80 && SoH<=100)
